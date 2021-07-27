@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: none;
+    flex-direction: column;
+    background-color: #81b29a;
+    position: relative;
+}
+
+.measure-counter {
+    height: 50px;
+    width: 50px;
+    border: solid red 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 30vh;
+}
+
+.beat-counter-box {
+    position: absolute;
+    top: 40vh;
+    width: 48vh;
+    height: 16vh;
+    border: white solid 1px;
+    display: relative;
+    
+    
+    
+}
+
+.animation {
+    width: 48vh;
+    height: 12vh;
+    position: absolute;
+    border: solid blue 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 2vh;
+    /* visibility: hidden; */
+    
+    
+    
+}
+
+.dot {
+    height: 6vh;
+    width: 6vh;
+    border-radius: 50%;
+    display: absolute;
+    /* visibility: hidden; */
+}
+
+.bar {
+    width: 42vh;
+    height: 2vh;
+    background-color: rgb(186, 173, 139);
+    z-index: -2;
+    position: absolute;
+    left: 3vh;
+    top: 7vh;
+}
+
+.fill {
+    background-color: rgb(255, 255, 255);
+    z-index: -1;
+    transform-origin: left;
+    animation: fill 2400ms linear infinite;
+
+}
+
+@keyframes fill {
+    0% { width: 0vh;}
+    33% {width: 14vh}
+    66% {width: 28vh;}
+    100% { width: 42vh;}
+}
+
+
+
+/* .one {    
+}
+
+.two {
+}
+
+.three {
+}
+
+.four {
+} */
+
+.empty {
+    background-color: rgb(174, 140, 134);
+}
+
+.empty-end {
+    background-color: rgb(141, 141, 182)
+}
