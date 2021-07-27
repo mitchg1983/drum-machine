@@ -6,8 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metronome</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 <body>
+    <div class="sound-selection">
+        <input type="radio" class = "selected" name="picker" value="Metronome" checked>Metronome<br>
+        <input type="radio" name="picker" value="Kick Drum">Kick Drum<br>
+        <input type="radio" name="picker" value="Snare Drum">Snare Drum<br>
+        <input type="radio" name="picker" value="Hi Hat">Hi Hat<br>
+    </div>
     <div class="tip">
         (Click anywhere to hear sound...)
     </div>
@@ -19,6 +27,12 @@
         </div>
         <div class="background-right"></div>
         <div class="arm"></div>
+    </div>
+
+    <div class="measure-counter">
+
+
+
     </div>
 
     <script src="main.js"></script>

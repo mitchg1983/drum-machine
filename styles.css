@@ -70,3 +70,20 @@ body {
     transform-origin: bottom center;
     animation: tick 1200ms ease-in-out infinite;
 }
+
+.measure-counter {
+    margin-top: 20px;
+    height: 30px;
+    border: solid red 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    color: black;
+}
+
+.sound-selection {
+    height: 100px;
+    width: 150px;
+    border: solid red 1px;
+}
