@@ -31,9 +31,6 @@ body {
     height: 16vh;
     border: white solid 1px;
     display: relative;
-    
-    
-    
 }
 
 .animation {
@@ -45,10 +42,6 @@ body {
     align-items: center;
     justify-content: space-between;
     top: 2vh;
-    /* visibility: hidden; */
-    
-    
-    
 }
 
 .dot {
@@ -58,7 +51,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* visibility: hidden; */
 }
 
 .bar {

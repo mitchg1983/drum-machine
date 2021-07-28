@@ -1,11 +1,3 @@
-// const test = $(".test");
-
-// $(test).addClass("color");
-
-// console.log($(test).text());
-
-// $(test).text("this is a change");
-
 let count = 1;
 
 let time = 4;
@@ -18,10 +10,7 @@ const fillBar = $("div.fillbar");
 
 const popper = $("div.P");
 
-
 function update() {
-
-
   if (currentSound === "Metronome") {
     if (count <= 3) {
       updateCounter();
@@ -46,44 +35,35 @@ function updateCounter() {
   const outputText = count + " / " + time;
   $(counter).text(outputText);
 
-$(popper).text("");
+  $(popper).text("");
 
   if (count === 1) {
-    $("div.four").text("")
-    $("div.four").removeClass("popOut")
+    $("div.four").text("");
+    $("div.four").removeClass("popOut");
     $("div.one").text(outputText).addClass("popOut");
-
   }
 
   if (count === 2) {
-    $("div.one").text("")
+    $("div.one").text("");
     $("div.one").removeClass("popOut");
     $("div.two").text(outputText).addClass("popOut");
-
-
   }
 
   if (count === 3) {
-    $("div.two").text("")
-    $("div.two").removeClass("popOut")
+    $("div.two").text("");
+    $("div.two").removeClass("popOut");
     $("div.three").text(outputText).addClass("popOut");
-
   }
 
   if (count === 4) {
-    $("div.three").text("")
-    $("div.three").removeClass("popOut")
+    $("div.three").text("");
+    $("div.three").removeClass("popOut");
     $("div.four").text(outputText).addClass("popOut");
-
   }
-// console.log(count);
-
-
-
 }
 
 setupUpdate();
 
-function startFill () {
-$(fillBar).addClass("fill");
+function startFill() {
+  $(fillBar).addClass("fill");
 }

@@ -10,6 +10,27 @@ body {
     margin: none;
     flex-direction: column;
     background-color: #81b29a;
+    position: relative;
+}
+
+.beat-counter-box {
+    position: absolute;
+    top: 40vh;
+    width: 48vh;
+    height: 16vh;
+    /* border: white solid 1px; */
+    display: relative;
+}
+
+.animation {
+    width: 48vh;
+    height: 12vh;
+    position: absolute;
+    /* border: solid blue 1px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 2vh;
 }
 
 .tip {
@@ -17,6 +38,7 @@ body {
     font-weight: bold;
     margin: 24px;
     font-family: 'Courier New', Courier, monospace;
+    visibility: hidden;
 }
 
 .metronome {
@@ -74,7 +96,7 @@ body {
 .measure-counter {
     margin-top: 20px;
     height: 30px;
-    border: solid red 1px;
+    /* border: solid red 1px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,5 +107,82 @@ body {
 .sound-selection {
     height: 100px;
     width: 150px;
-    border: solid red 1px;
+    /* border: solid red 1px; */
+    position: absolute;
+    top: 15vh;
+}
+
+.dot {
+    height: 6vh;
+    width: 6vh;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bar {
+    width: 42vh;
+    height: 2vh;
+    background-color: rgb(186, 173, 139);
+    z-index: -2;
+    position: absolute;
+    left: 3vh;
+    top: 7vh;
+}
+
+.fill {
+    background-color: rgb(255, 255, 255);
+    z-index: -1;
+    transform-origin: left;
+    animation: fill 2400ms linear infinite;
+    border-top-right-radius: 1vh;
+    border-bottom-right-radius: 1vh;
+
+}
+
+@keyframes fill {
+    0% { width: 0vh;}
+    33% {width: 14vh}
+    66% {width: 28vh;}
+    100% { width: 42vh;}
+}
+
+.popOut {
+    animation: popOut 150ms ease-in-out;
+}
+
+@keyframes popOut {
+    from{transform:scale(0.8); background-color:white}
+    50%{transform:scale(1.2); background-color: rgb(255, 255, 140);}
+    to{transform:scale(1); background-color: yellow;}
+}
+
+
+/* .one {    
+}
+
+.two {
+}
+
+.three {
+}
+
+.four {
+} */
+
+.five {
+    /* visibility: hidden; */
+}
+
+.empty {
+    background-color: rgb(255, 255, 255);
+}
+
+.empty-end {
+    background-color: rgb(141, 141, 182)
+}
+
+.popper {
+    
 }

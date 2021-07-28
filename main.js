@@ -13,6 +13,10 @@ const counter = $("div.measure-counter");
 
 const buttons = $("input");
 
+const fillBar = $("div.fillbar");
+
+const popper = $("div.P");
+
 //trackers for time signature
 let count = 1;
 
@@ -99,18 +103,46 @@ function update() {
 //This function sets up update() to be called every 600ms
 function setupUpdate() {
   setInterval(update, 600);
+  setTimeout(startFill, 600);
 }
 
 //Updates the beat count at the bottom of the metronome
 function updateCounter() {
   const outputText = count + " / " + time;
   $(counter).text(outputText);
+
+  $(popper).text("");
+
+  if (count === 1) {
+    $("div.four").text("");
+    $("div.four").removeClass("popOut");
+    $("div.one").text(outputText).addClass("popOut");
+  }
+
+  if (count === 2) {
+    $("div.one").text("");
+    $("div.one").removeClass("popOut");
+    $("div.two").text(outputText).addClass("popOut");
+  }
+
+  if (count === 3) {
+    $("div.two").text("");
+    $("div.two").removeClass("popOut");
+    $("div.three").text(outputText).addClass("popOut");
+  }
+
+  if (count === 4) {
+    $("div.three").text("");
+    $("div.three").removeClass("popOut");
+    $("div.four").text(outputText).addClass("popOut");
+  }
 }
 
-// Call setupUpdate() once after 300ms
-setTimeout(setupUpdate, 300);
+setupUpdate();
 
-
+function startFill() {
+  $(fillBar).addClass("fill");
+}
 
 $(buttons).each(function (i) {
 
