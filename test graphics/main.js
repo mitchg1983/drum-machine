@@ -35,7 +35,7 @@ function updateCounter() {
   const outputText = count + " / " + time;
   $(counter).text(outputText);
 
-  $(popper).text("");
+  // $(popper).text(count);
 
   if (count === 1) {
     $("div.four").text("");

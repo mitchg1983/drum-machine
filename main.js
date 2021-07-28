@@ -15,7 +15,7 @@ const buttons = $("input");
 
 const fillBar = $("div.fillbar");
 
-const popper = $("div.P");
+const popper = $("div.popper");
 
 //trackers for time signature
 let count = 1;
@@ -106,35 +106,61 @@ function setupUpdate() {
   setTimeout(startFill, 600);
 }
 
+
+
 //Updates the beat count at the bottom of the metronome
 function updateCounter() {
   const outputText = count + " / " + time;
   $(counter).text(outputText);
 
-  $(popper).text("");
+
 
   if (count === 1) {
-    $("div.four").text("");
-    $("div.four").removeClass("popOut");
-    $("div.one").text(outputText).addClass("popOut");
+    $(popper).removeClass("rainbow-bg");
+    $(fillBar).removeClass("full");
+    // $("div.four").text("");
+    // $("div.four").removeClass("popOut");
+    $("div.one").text(count).addClass("popOut");
+
+    setTimeout(function (){
+      $("div.one").text("").removeClass("popOut").addClass("rainbow-bg");
+}, 200);
+
+
   }
 
   if (count === 2) {
-    $("div.one").text("");
-    $("div.one").removeClass("popOut");
-    $("div.two").text(outputText).addClass("popOut");
+    // $("div.one").text("");
+    // $("div.one").removeClass("popOut");
+    $("div.two").text(count).addClass("popOut");
+
+
+    setTimeout(function (){
+          $("div.two").text("").removeClass("popOut").addClass("rainbow-bg");
+    }, 200);
+
+
   }
 
   if (count === 3) {
-    $("div.two").text("");
-    $("div.two").removeClass("popOut");
-    $("div.three").text(outputText).addClass("popOut");
+    $("div.three").text(count).addClass("popOut");
+
+    setTimeout(function (){
+      $("div.three").text("").removeClass("popOut").addClass("rainbow-bg");
+}, 200);
   }
 
   if (count === 4) {
-    $("div.three").text("");
-    $("div.three").removeClass("popOut");
-    $("div.four").text(outputText).addClass("popOut");
+    // $("div.three").text("");
+    // $("div.three").removeClass("popOut");
+    $("div.four").text(count).addClass("popOut");
+    // $(fillBar).addClass("rainbow-bg")
+
+    setTimeout(function (){
+      $("div.four").text("").removeClass("popOut").addClass("rainbow-bg");
+      // $(fillBar).removeClass("rainbow-bg");
+}, 200);
+
   }
 }
 
